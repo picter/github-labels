@@ -1,7 +1,6 @@
 const axios = require('axios');
 const config = require('../config');
 
-
 async function loadLabels(repo) {
   const labels = await axios.get(
     `${config.apiUrl}/repos/${repo}/labels`,
