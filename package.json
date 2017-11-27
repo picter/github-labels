@@ -1,0 +1,17 @@
+{
+  "name": "github-labels",
+  "version": "1.0.0",
+  "description": "CLI to manage labels across multiple repositories",
+  "bin": {
+    "gl": "./src/index.js"
+  },
+  "main": "index.js",
+  "repository": "git@github.com:picter/github-labels.git",
+  "author": "Matthias Lohscheidt <mail@mlohscheidt.de>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "jest": "^21.2.1",
+    "yargs": "^10.0.3"
+  }
+}
