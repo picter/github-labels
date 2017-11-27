@@ -9,6 +9,9 @@
   "repository": "git@github.com:picter/github-labels.git",
   "author": "Matthias Lohscheidt <mail@mlohscheidt.de>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest --watch"
+  },
   "dependencies": {
     "axios": "^0.17.1",
     "jest": "^21.2.1",
