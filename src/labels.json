@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Foo",
+    "color": "ff0000",
+    "formerNames": ["Bar", "Lar"],
+    "default": false
+  },
+  {
+    "name": "Xoo",
+    "color": "ff0000",
+    "formerNames": ["Tar"],
+    "default": false
+  }
+]
