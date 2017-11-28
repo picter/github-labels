@@ -15,7 +15,7 @@ async function loadLabels(repo) {
       },
     );
     const links = parseLinkHeader(response.headers.link)
-    nextPage = links.next ? links.next.url : undefined;
+    nextPage = links && links.next ? links.next.url : undefined;
     labels.push(...response.data);
   }
   return labels;
