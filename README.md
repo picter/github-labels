@@ -3,6 +3,8 @@ CLI to manage labels across multiple repositories
 
 ## Usage
 
+**NOT READY YET, STILL USING EXAMPLE LIST. DO NOT USE IT**
+
 Add a config file `.gl.json` to your home directory:
 
 ```
