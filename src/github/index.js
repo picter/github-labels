@@ -1,16 +1,24 @@
 const axios = require('axios');
+const parseLinkHeader = require('parse-link-header');
 const config = require('../config');
 
 async function loadLabels(repo) {
-  const labels = await axios.get(
-    `${config.apiUrl}/repos/${repo}/labels`,
-    {
-      headers: {
-        Authorization: `bearer ${config.token}`,
+  const labels = [];
+  let nextPage = `${config.apiUrl}/repos/${repo}/labels`;
+  while (nextPage) {
+    const response = await axios.get(
+      nextPage,
+      {
+        headers: {
+          Authorization: `bearer ${config.token}`,
+        },
       },
-    },
-  );
-  return labels.data;
+    );
+    const links = parseLinkHeader(response.headers.link)
+    nextPage = links.next ? links.next.url : undefined;
+    labels.push(...response.data);
+  }
+  return labels;
 }
 
 async function addLabel(repo, { name, color }) {
