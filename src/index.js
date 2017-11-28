@@ -1,6 +1,7 @@
 const chalk = require('chalk');
 const yargs = require('yargs');
 const syncRepo = require('./commands/sync-repo');
+const syncAllRepos = require('./commands/sync-all-repos');
 
 const labels = require('./labels.json');
 
@@ -18,6 +19,8 @@ const main = async () => {
   if(argv.target.match(/\//)) {
     return syncRepo(argv.target, labels);
   }
+
+  return syncAllRepos(argv.target, labels)
 };
 
 main();
