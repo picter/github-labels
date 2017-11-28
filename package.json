@@ -1,6 +1,6 @@
 {
   "name": "github-labels",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "CLI to manage labels across multiple repositories",
   "bin": {
     "gl": "./src/index.js"
