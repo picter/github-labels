@@ -3,7 +3,7 @@ const chalk = require('chalk');
 const getLabelDiff = require('../helpers/get-label-diff');
 const { loadLabels, addLabel, updateLabel } = require('../github');
 
-async function updateLabels(repo, newLabels) {
+async function syncRepo(repo, newLabels) {
   try {
     console.log(chalk.bold(repo));
     const loadingSpinner = ora(`Loading labels of ${repo}`).start();
@@ -26,4 +26,4 @@ async function updateLabels(repo, newLabels) {
   }
 }
 
-module.exports = updateLabels;
+module.exports = syncRepo;
