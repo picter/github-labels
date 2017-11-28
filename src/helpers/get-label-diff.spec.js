@@ -12,6 +12,12 @@ const existingLabels = [{
   name: 'bar',
   color: 'FF0000',
   default: false,
+}, {
+  id: 753671624,
+  url: 'https://api.github.com/repos/picter/rest-api/labels/tar',
+  name: 'tar',
+  color: 'FFFF00',
+  default: false,
 }];
 
 const targetLabels = [{
@@ -25,6 +31,10 @@ const targetLabels = [{
   default: false,
 }, {
   name: 'xar',
+  color: 'FF00FF',
+  default: false,
+}, {
+  name: 'tar',
   color: 'FF00FF',
   default: false,
 }];
@@ -43,15 +53,15 @@ describe('getLabelDiff', () => {
     }])
   });
 
-  it('adds existing labels to `update`', () => {
+  it('adds existing labels to `update`, if `color` or `name` changed', () => {
     expect(result.update).toEqual([{
       url: 'https://api.github.com/repos/picter/rest-api/labels/foo',
       name: 'foo new',
       color: 'FF0000',
     }, {
-      url: 'https://api.github.com/repos/picter/rest-api/labels/bar',
-      name: 'bar',
-      color: 'FF0000',
+      url: 'https://api.github.com/repos/picter/rest-api/labels/tar',
+      name: 'tar',
+      color: 'FF00FF',
     }])
   });
 });

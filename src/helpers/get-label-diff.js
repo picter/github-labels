@@ -9,7 +9,14 @@ const findLabel = (label, existingLabels) => existingLabels.find(
 module.exports = function(existingLabels, newLabels) {
   const add = newLabels.filter(label => !findLabel(label, existingLabels));
   const update = newLabels
-    .filter(label => findLabel(label, existingLabels))
+    .filter(label => {
+      const existingLabel = findLabel(label, existingLabels);
+      if (!existingLabel) {
+        return false;
+      }
+      return `${label.color.toLowerCase()}${label.name}`
+        !== `${existingLabel.color.toLowerCase()}${existingLabel.name}`;
+    })
     .map(label => {
       const oldLabel = findLabel(label, existingLabels);
       return {
