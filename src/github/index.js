@@ -47,4 +47,23 @@ async function updateLabel({ url, name, color }) {
   return labels.data;
 }
 
-module.exports = { loadLabels, addLabel, updateLabel };
+async function loadRepos(org) {
+  const repos = [];
+  let nextPage = `${config.apiUrl}/orgs/${org}/repos`;
+  while (nextPage) {
+    const response = await axios.get(
+      nextPage,
+      {
+        headers: {
+          Authorization: `bearer ${config.token}`,
+        },
+      },
+    );
+    const links = parseLinkHeader(response.headers.link)
+    nextPage = links && links.next ? links.next.url : undefined;
+    repos.push(...response.data);
+  }
+  return repos;
+}
+
+module.exports = { loadLabels, addLabel, updateLabel, loadRepos };
