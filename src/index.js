@@ -24,6 +24,19 @@ const main = async () => {
     console.log(chalk.red(`${command} is an invalid command`));
     process.exit();
   }
+  if(!argv.labels) {
+    console.log(chalk.red(`Please specify the path to a json-list of labels with -l`));
+    process.exit();
+  };
+
+  let labels;
+  try {
+    labels = JSON.parse(fs.readFileSync(argv.labels, { encoding: 'utf8' }));
+  } catch (error) {
+    console.log(chalk.red(`Couldn't load label set from ${argv.labels}`));
+    process.exit();
+  }
+
   if(argv.target.match(/\//)) {
     return syncRepo(argv.target, labels);
   }
