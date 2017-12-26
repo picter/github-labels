@@ -34,6 +34,7 @@ const main = async () => {
     labels = JSON.parse(fs.readFileSync(argv.labels, { encoding: 'utf8' }));
   } catch (error) {
     console.log(chalk.red(`Couldn't load label set from ${argv.labels}`));
+    console.log(error);
     process.exit();
   }
 
