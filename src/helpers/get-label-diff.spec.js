@@ -13,9 +13,21 @@ const existingLabels = [{
   color: 'FF0000',
   default: false,
 }, {
-  id: 753671624,
+  id: 753671625,
   url: 'https://api.github.com/repos/picter/rest-api/labels/tar',
   name: 'tar',
+  color: 'FFFF00',
+  default: false,
+}, {
+  id: 753671626,
+  url: 'https://api.github.com/repos/picter/rest-api/labels/bug',
+  name: 'bug',
+  color: 'FFFF00',
+  default: false,
+}, {
+  id: 753671627,
+  url: 'https://api.github.com/repos/picter/rest-api/labels/type+bug',
+  name: 'type: bug',
   color: 'FFFF00',
   default: false,
 }];
@@ -35,6 +47,11 @@ const targetLabels = [{
   default: false,
 }, {
   name: 'tar',
+  color: 'FF00FF',
+  default: false,
+}, {
+  name: 'type: bug',
+  formerNames: ['bug'],
   color: 'FF00FF',
   default: false,
 }];
@@ -62,6 +79,10 @@ describe('getLabelDiff', () => {
       url: 'https://api.github.com/repos/picter/rest-api/labels/tar',
       name: 'tar',
       color: 'FF00FF',
-    }])
+    }, {
+      url: 'https://api.github.com/repos/picter/rest-api/labels/type+bug',
+      name: 'type: bug',
+      color: 'FF00FF',
+    }]);
   });
 });
