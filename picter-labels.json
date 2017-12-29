@@ -1,0 +1,57 @@
+[
+  {
+    "name": "priority: critical",
+    "color": "D10069"
+  },
+  {
+    "name": "priority: serious",
+    "color": "D10069"
+  },
+  {
+    "name": "priority: medium",
+    "color": "D10069"
+  },
+  {
+    "name": "priority: low",
+    "color": "D10069"
+  },
+  {
+    "name": "status: blocked",
+    "color": "000000"
+  },
+  {
+    "name": "status: help wanted",
+    "color": "000000",
+    "formerNames": ["help wanted"]
+  },
+  {
+    "name": "type: bug",
+    "color": "EC5f67",
+    "formerNames": ["bug"]
+  },
+  {
+    "name": "type: copy text",
+    "color": "5FB3B3"
+  },
+  {
+    "name": "type: feature",
+    "color": "FAC863"
+  },
+  {
+    "name": "type: optimization",
+    "color": "D8DEE9"
+  },
+  {
+    "name": "type: question",
+    "color": "F99157",
+    "formerNames": ["question", "discussion", "type: discussion"]
+  },
+  {
+    "name": "type: refactor",
+    "color": "65737E"
+  },
+  {
+    "name": "type: styling",
+    "color": "C594C5"
+  }
+]
