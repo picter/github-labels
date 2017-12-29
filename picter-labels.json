@@ -25,10 +25,6 @@
     "formerNames": ["help wanted"]
   },
   {
-    "name": "status: review needed",
-    "color": "6699CC"
-  },
-  {
     "name": "type: bug",
     "color": "EC5f67",
     "formerNames": ["bug"]
@@ -36,11 +32,6 @@
   {
     "name": "type: copy text",
     "color": "5FB3B3"
-  },
-  {
-    "name": "type: discussion",
-    "color": "5FB3B3",
-    "formerNames": ["discussion"]
   },
   {
     "name": "type: feature",
@@ -53,7 +44,7 @@
   {
     "name": "type: question",
     "color": "F99157",
-    "formerNames": ["question"]
+    "formerNames": ["question", "discussion", "type: discussion"]
   },
   {
     "name": "type: refactor",
