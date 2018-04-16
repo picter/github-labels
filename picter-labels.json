@@ -38,6 +38,10 @@
     "formerNames": ["bug"]
   },
   {
+    "name": "type: cleanup",
+    "color": "c2e0c6"
+  },
+  {
     "name": "type: copy text",
     "color": "5FB3B3"
   },
