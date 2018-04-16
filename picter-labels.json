@@ -26,7 +26,7 @@
   },
   {
     "name": "status: changes requested",
-    "color": "d93f0b"
+    "color": "EC5f67"
   },
   {
     "name": "status: on hold",
@@ -48,6 +48,10 @@
   {
     "name": "type: optimization",
     "color": "D8DEE9"
+  },
+  {
+    "name": "type: qa",
+    "color": "c2e0c6"
   },
   {
     "name": "type: question",
