@@ -59,6 +59,10 @@
     "formerNames": ["question", "discussion", "type: discussion"]
   },
   {
+    "name": "type: security",
+    "color": "EC5f67"
+  },
+  {
     "name": "type: refactor",
     "color": "65737E"
   },
