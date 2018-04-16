@@ -25,13 +25,29 @@
     "formerNames": ["help wanted"]
   },
   {
+    "name": "status: changes requested",
+    "color": "EC5f67"
+  },
+  {
+    "name": "status: on hold",
+    "color": "312ab2"
+  },
+  {
     "name": "type: bug",
     "color": "EC5f67",
     "formerNames": ["bug"]
   },
   {
+    "name": "type: cleanup",
+    "color": "c2e0c6"
+  },
+  {
     "name": "type: copy text",
     "color": "5FB3B3"
+  },
+  {
+    "name": "type: design",
+    "color": "C594C5"
   },
   {
     "name": "type: feature",
@@ -42,9 +58,17 @@
     "color": "D8DEE9"
   },
   {
+    "name": "type: qa",
+    "color": "c2e0c6"
+  },
+  {
     "name": "type: question",
     "color": "F99157",
     "formerNames": ["question", "discussion", "type: discussion"]
+  },
+  {
+    "name": "type: security",
+    "color": "EC5f67"
   },
   {
     "name": "type: refactor",
