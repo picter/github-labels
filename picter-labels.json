@@ -25,6 +25,14 @@
     "formerNames": ["help wanted"]
   },
   {
+    "name": "status: changes requested",
+    "color": "d93f0b"
+  },
+  {
+    "name": "status: on hold",
+    "color": "312ab2"
+  },
+  {
     "name": "type: bug",
     "color": "EC5f67",
     "formerNames": ["bug"]
